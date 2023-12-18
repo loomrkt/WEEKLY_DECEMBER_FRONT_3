@@ -1,0 +1,20 @@
+{
+  "name": "weekly_december_front_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss build main.css -o ./public/style.css --watch",
+    "build": "postcss build main.css -o ./public/style.css && postcss ./public/style.css -o ./public/style.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.3.6"
+  }
+}

@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="We cover all kinds of categories and a weekly special guest.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="icon&vector/logo.ico" type="image/x-icon">
+  <title>POD OF CAST</title>
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js" defer></script> 
+  <script src="https://cdn.jsdelivr.net/npm/gsap" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" defer></script>
+  <script src="js/animationSvg.js" defer></script>
+</head>
+<body class="w-screen overflow-x-hidden">
+  <main class=" w-full ">
+    <section class="relative bg-champagne w-full ">
+      <nav class=" border-gray-200 dark:bg-gray-900 block md:hidden">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="icon&vector/logo.png" class="h-16" alt="Logo"/>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex md:items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" class=" font-bold text-base block py-2 px-3 text-white bg-vermillion rounded md:bg-transparent md:text-vermillion md:p-0 dark:text-white md:dark:text-vermillion" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" class=" font-bold text-base block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="#" class=" font-bold text-base block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              </li>
+              <li>
+                <a href="#" class=" font-bold text-base block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              </li>
+              <li>
+                <button type="button" class="text-black hover:text-white hover:bg-black rounded-md text-sm font-bold px-5 py-2.5 ring-2 ring-black mt-2">RECENT EPISODES</button>
+             </li>
+             <li>
+                 <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-5 py-2.5 box-shadow-btn-2 mt-4">SUBSCRIBE</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <nav class=" border-gray-200 dark:bg-gray-900 md:block hidden md:px-28">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div class="flex items-center">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="icon&vector/logo.png" class="h-16" alt="Logo"/>
+            </a>
+            <div class="hidden w-full md:block md:w-auto md:ml-16 lg:ml-24">
+              <ul class="font-medium flex md:items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                  <a href="#" class=" font-bold text-base block py-2 px-3 text-white bg-vermillion rounded md:bg-transparent md:text-black md:p-0 dark:text-white md:dark:text-vermillion" aria-current="page">Episodes</a>
+                </li>
+                <li>
+                  <a href="#" class=" font-bold text-base block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                </li>
+                <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class=" font-bold text-base py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent flex items-center">More &nbsp;
+                    <img src="icon&vector/header/Arrow - Down.png" alt="Arrow Down" width="16" height="16">
+                  </button>
+                  <div id="dropdownNavbar" class="z-10 hidden font-normal divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        </li>
+                      </ul>
+                      <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                      </div>
+                  </div>
+              </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden w-full md:block md:w-auto">
+            <ul class="font-medium flex md:items-center flex-col p-4 md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+              <li>
+                <button type="button" class="text-black hover:text-white hover:bg-black rounded-md text-sm font-bold px-5 py-2.5 ring-2 ring-black">RECENT EPISODES</button>
+             </li>
+             <li>
+                 <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-5 py-2.5 box-shadow-btn-2">SUBSCRIBE</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <div class="flex flex-col items-center justify-center pt-10 pb-32 w-full">
+          <h1 class="display-header text-center md:w-1/2 text-6xl md:text-[96px] px-4 md:px-0">Your Daily <span class="text-vermillion">Podcast</span></h1>
+          <p class="mt-3 md:w-1/4 text-center px-4 md:px-0"> 
+            We cover all kinds of categories and a weekly special guest.
+          </p>
+          <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+             <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1">SUBSCRIBE</button>
+          </div>
+          <div class="w-full inline-flex flex-nowrap mt-20 overflow-x-hidden" >
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none" id="scrollInf">
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector.png" alt="" class="absolute top-3 left-6">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">COVID-19 Endemic</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover2.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector2.png" alt="" class="absolute top-12 left-[7.5rem]">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Self–confidence</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover3.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector3.png" alt="" class="absolute top-[6.3rem] left-[6.5rem]">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Perplexed Mind</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover4.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/Vector4-1.png" alt="" class="absolute top-[7.8rem] left-11">
+                  <img src="icon&vector/header/infiniteScroll/vector4-2.png" alt="" class="absolute top-[7.2rem] left-[1.29rem]">
+                  <img src="icon&vector/header/infiniteScroll/Vector4-3.png" alt="" class="absolute top-40 left-10">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Social Class</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover5.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector5.png" alt="" class="absolute top-0 left-0">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Women’s Rights</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover6.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector6.png" alt="" class="absolute top-14 left-10">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Tesla Autopilot</h2>
+                </div>
+              </li>
+            </ul>
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none" id="scrollInf2" aria-hidden="true">
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector.png" alt="" class="absolute top-3 left-6">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">COVID-19 Endemic</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover2.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector2.png" alt="" class="absolute top-12 left-[7.5rem]">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Self–confidence</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover3.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector3.png" alt="" class="absolute top-[6.3rem] left-[6.5rem]">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Perplexed Mind</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover4.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/Vector4-1.png" alt="" class="absolute top-[7.8rem] left-11">
+                  <img src="icon&vector/header/infiniteScroll/vector4-2.png" alt="" class="absolute top-[7.2rem] left-[1.29rem]">
+                  <img src="icon&vector/header/infiniteScroll/Vector4-3.png" alt="" class="absolute top-40 left-10">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Social Class</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover5.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector5.png" alt="" class="absolute top-0 left-0">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Women’s Rights</h2>
+                </div>
+              </li>
+              <li>
+                <div class="w-[373px] h-[373px] bg-[url('icon&vector/header/infiniteScroll/cover6.png')] bg rounded-xl relative">
+                  <img src="icon&vector/header/infiniteScroll/vector6.png" alt="" class="absolute top-14 left-10">
+                  <div class="flex items-center space-x-2 absolute right-6 top-6">
+                    <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+                    <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+                  </div>
+                  <h2 class="text-pewter-blue absolute bottom-6 left-6">Tesla Autopilot</h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="md:px-28 w-full max-w-screen-xl mx-auto ">
+            <div class=" flex justify-between flex-col md:flex-row items-center border-y-2 border-black mt-20 w-full">
+              <h3>Supported by:</h3>
+              <div class="flex items-center space-x-4">
+                <div class="p-4 md:p-6 lg:p-10">
+                    <img src="icon&vector/header/Spotify (1).png" alt="">
+                </div>
+                <div class="p-4 md:p-6 lg:p-10">
+                    <img src="icon&vector/header/Google Podcast (1).png" alt="">
+                </div>
+                <div class="p-4 md:p-6 lg:p-10">
+                    <img src="icon&vector/header/Youtube (1).png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="relative w-full max-w-screen-xl mx-auto py-32 p-4 md:px-28">
+      <h1 class="md:w-3/4 text-center mx-auto">Talk. Listen. Get inspired by every minute of it.</h1>
+      <div class="flex items-center flex-col md:flex-row mt-20 justify-between">
+        <div class="flex flex-col items-center text-center w-[80%] md:w-[40%]">
+          <img src="icon&vector/about/Illustration 01.svg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. </p>
+        </div>
+        <div class="flex flex-col items-center text-center w-[80%] md:w-[40%]">
+          <img src="icon&vector/about/Illustration 02.svg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. </p>
+        </div>
+      </div>
+      <div class="bg-champagne p-8 mt-28 rounded-md">
+        <h1 class="display-header mx-auto text-center md:w-1/2 text-6xl md:text-[96px] px-4 md:px-0 text-vermillion">“</h1>
+        <h2 class="w-3/4 text-center mx-auto">One of the best daily podcasts that covers every topic on Spotify.</h2>
+        <div class="flex items-center justify-center mt-14">
+          <div class="flex items-center">
+            <img src="icon&vector/about/avatar.png" alt="">
+            <p class="caption ml-2">John Smith,</p>
+          </div>
+          <div class="flex items-center ml-1">
+            <img src="icon&vector/about/Vector.png" alt="">
+            <p class="caption font-bold ml-1">Social Community Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative w-full py-32 bg-alice-blue">
+      <div class="max-w-screen-xl mx-auto">
+        <h1 class="md:w-3/4 text-center mx-auto">What our listeners say</h1>
+        <h3 class="text-center mt-4">Their experience throughout every platform</h3>
+      </div>
+      <div class="w-full overflow-x-hidden px-4 lg:px-40">
+        <ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none mt-20 w-max">
+          <li class="bg-white p-8 rounded-md w-[570px]">
+            <h1 class="text-6xl md:text-[96px] leading-none display-header text-vermillion">“</h1>
+            <h3>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. </h2>
+            <div class="flex items-center justify-start mt-8">
+              <div class="flex items-center">
+                <img src="icon&vector/about/avatar.png" alt="">
+                <p class="caption ml-2">John Smith,</p>
+              </div>
+              <div class="flex items-center ml-1">
+                <img src="icon&vector/about/Vector.png" alt="">
+                <p class="caption font-bold ml-1">Social Community Manager</p>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white p-8 rounded-md w-[570px]">
+            <h1 class="text-6xl md:text-[96px] leading-none display-header text-vermillion">“</h1>
+            <h3>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. </h2>
+            <div class="flex items-center justify-start mt-8">
+              <div class="flex items-center">
+                <img src="icon&vector/about/avatar (1).png" alt="">
+                <p class="caption ml-2">Emily Blunt,</p>
+              </div>
+              <div class="flex items-center ml-1">
+                <img src="icon&vector/about/google podcast (3).png" alt="">
+                <p class="caption font-bold ml-1">Google Podcast</p>
+              </div>
+            </div>
+          </li>
+          <li class="bg-white p-8 rounded-md w-[570px]">
+            <h1 class="text-6xl md:text-[96px] leading-none display-header text-vermillion">“</h1>
+            <h3>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor incidi ut labore et dolore magna aliqua. </h2>
+            <div class="flex items-center justify-start mt-8">
+              <div class="flex items-center">
+                <img src="icon&vector/about/avatar (2).png" alt="">
+                <p class="caption ml-2">Mia Winters,</p>
+              </div>
+              <div class="flex items-center ml-1">
+                <img src="icon&vector/about/apple podcast (2).png" alt="">
+                <p class="caption font-bold ml-1">Apple Podcast</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center justify-start gap-2 px-4 lg:px-40 mt-16">
+        <img src="icon&vector/about/Arrow - Left Circle.png" alt="">
+        <img src="icon&vector/about/Arrow - Right Circle.png" alt="">
+      </div>
+    </section>
+    <section class="relative w-full max-w-screen-xl mx-auto py-32 p-4 md:px-28 flex flex-col items-center justify-center">
+      <h1 class="md:w-3/4 text-center mx-auto">Membership benefits</h1>
+      <h3 class="text-center mt-4">Become our sponsor and get all benefits</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 justify-between">
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Scribble (2).png" alt="">
+          <h3 class="text-center font-bold mt-4">Topic by Request</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Shining stars (1).png" alt="">
+          <h3 class="text-center font-bold mt-4">Exclusive Content</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Face 1 (1).png" alt="">
+          <h3 class="text-center font-bold mt-4">Join the Community</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Face 5 (1).png" alt="">
+          <h3 class="text-center font-bold mt-4">Livestreaming Access</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Fire (1).png" alt="">
+          <h3 class="text-center font-bold mt-4">Exclusive Episodes & Merch</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <img src="icon&vector/features/Star (1).png" alt="">
+          <h3 class="text-center font-bold mt-4">And much more!</h3>
+          <p>Lorem ipsum dolor sit amet consectet piscing elit, sed do eiusmod tempor.</p>
+        </div>
+      </div>
+      <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 mt-16">SEE PRICING</button>
+    </section>
+    <section class="relative py-32 p-4 md:px-28 bg-champagne">
+      <div class="w-full max-w-screen-xl mx-auto flex flex-col items-center justify-center">
+        <h1 class="md:w-3/4 text-center mx-auto">Recent Episodes</h1>
+        <h3 class="text-center mt-4">Available on your favorite platform</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20 justify-between">
+          <div class="border-2 border-black rounded-xl bg-white p-4 box-shadow-content-1">
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-[166px] h-[166px] bg-[url('icon&vector/content/cover.png')] rounded-xl relative">
+                <img src="icon&vector/content/vector.png" alt="" class="absolute top-5 left-[1.5rem]">
+                <div class="flex items-center space-x-2 absolute right-3 top-3">
+                  <img src="icon&vector/header/google podcast.png" class="h-3 w-auto" width="24" height="24" alt="">
+                  <img src="icon&vector/header/spotify.png" class="h-3 w-auto" width="24" height="24" alt="">
+                  <img src="icon&vector/header/youtube.png" class="h-3 w-auto" width="24" height="24" alt="">
+                </div>
+              </div>
+              <div class="flex-1">
+                <p class="font-bold text-vermillion">Eps. 6</p>
+                <h3 class="font-bold text-vermillion mt-2">Become our sponsor and get all benefits</h3>
+                <hr class="border-davys-grey my-2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-4 items-center">
+              <div class="flex justify-center gap-2 items-center">
+                <div class="border border-davys-grey p-1 small rounded-md">covid-19</div>
+                <div class="border border-davys-grey p-1 small rounded-md">health</div>
+              </div>
+              <div class="flex gap-1 items-center justify-center">
+                <p class="small font-bold">Hosted by: </p>
+                <img src="icon&vector/content/host.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="border-2 border-black rounded-xl bg-white p-4">
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-[166px] h-[166px] bg-[url('icon&vector/content/cover.png')] rounded-xl relative">
+                <img src="icon&vector/content/vector.png" alt="" class="absolute top-5 left-[1.5rem]">
+                <div class="flex items-center space-x-2 absolute right-3 top-3">
+                  <img src="icon&vector/header/google podcast.png" class="h-3 w-auto" width="24" height="24" alt="">
+                  <img src="icon&vector/header/spotify.png" class="h-3 w-auto" width="24" height="24" alt="">
+                  <img src="icon&vector/header/youtube.png" class="h-3 w-auto" width="24" height="24" alt="">
+                </div>
+              </div>
+              <div class="flex-1">
+                <p class="font-bold text-vermillion">Eps. 6</p>
+                <h3 class="font-bold text-vermillion mt-2">Become our sponsor and get all benefits</h3>
+                <hr class="border-davys-grey my-2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac ultrices odio. </p>
+              </div>
+            </div>
+            <div class="flex justify-between mt-4 items-center">
+              <div class="flex justify-center gap-2 items-center">
+                <div class="border border-davys-grey p-1 small rounded-md">covid-19</div>
+                <div class="border border-davys-grey p-1 small rounded-md">health</div>
+              </div>
+              <div class="flex gap-1 items-center justify-center">
+                <p class="small font-bold">Hosted by: </p>
+                <img src="icon&vector/content/host.png" alt="">
+              </div>
+            </div>
+          </div>  
+        </div>
+        <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 mt-16">BROWSE ALL EPISODES</button>
+      </div>
+    </section>
+    <section class="relative w-full max-w-screen-xl mx-auto py-32 p-4 md:px-28 flex flex-col items-center justify-center">
+      <h1 class="md:w-3/4 text-center mx-auto">Become our sponsor</h1>
+      <h3 class="text-center mt-4">Get exclusive episodes, merch and more</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 justify-between">
+        <div class="border border-black p-8 rounded-lg">
+          <h2 class=" mt-4">Member</h2>
+          <p class="caption mt-4">Lorem ipsum dolor sit amet consectet cing elit, sed do eiusmod tempor.</p>
+          <div class="flex items-center justify-between mt-20">
+            <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 w-min">SUBSCRIBE</button>
+            <h3><span class="text-vermillion font-bold">$9.99</span>
+              <br>/month</h3>
+          </div>
+        </div>
+        <div class="border border-vermillion bg-champagne p-8 rounded-lg">
+          <div class="flex justify-between items-center mt-4">
+            <h2 class="">Member</h2>
+            <div class="small font-bold bg-vermillion p-1 text-white">MOST POPULAR</div>
+          </div>
+          <p class="caption mt-4">Lorem ipsum dolor sit amet consectet cing elit, sed do eiusmod tempor.</p>
+          <div class="flex items-center justify-between mt-20">
+            <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 w-min">SUBSCRIBE</button>
+            <h3><span class="text-vermillion font-bold">$14.99</span>
+              <br>/month</h3>
+          </div>
+        </div>
+        <div class="border border-black p-8 rounded-lg">
+          <h2 class=" mt-4">Member</h2>
+          <p class="caption mt-4">Lorem ipsum dolor sit amet consectet cing elit, sed do eiusmod tempor.</p>
+          <div class="flex items-center justify-between mt-20">
+            <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 w-min">SUBSCRIBE</button>
+            <h3><span class="text-vermillion font-bold">$9.99</span>
+              <br>/month</h3>
+          </div>
+        </div>
+        <div class="border border-black p-8 rounded-lg">
+          <p class="caption font-bold">What’s included:</p>
+          <ul class="mt-4">
+            <li class="mb-2">• Exclusive Content</li>
+            <li class="mb-2">• 5% Discount on Merch</li>
+            <li class="mb-2">• Join the Community</li>
+            <li class="mb-2">• Livestreaming Access</li>
+          </ul>
+        </div>
+        <div class="border border-vermillion bg-champagne p-8 rounded-lg">
+          <p class="caption font-bold">What’s included:</p>
+          <ul class="mt-4">
+            <li class="mb-2 font-bold">• Everything in Tier 1</li>
+            <li class="mb-2">• Free tickets to Events</li>
+            <li class="mb-2">• Limited Edition Merch</li>
+            <li class="mb-2">• Promote your Product</li>
+            <li class="mb-2">• Request Topic</li>
+          </ul>
+        </div>
+        <div class="border border-black p-8 rounded-lg">
+          <p class="caption font-bold">What’s included:</p>
+          <ul class="mt-4">
+            <li class="mb-2 font-bold">• Everything in Tier 2</li>
+            <li class="mb-2">• Exclusive Badge on Livestreaming</li>
+            <li class="mb-2">• Become an Official Sponsor</li>
+            <li class="mb-2">• Early Access to All Episodes</li>
+            <li class="mb-2">• Free Stikers and Merch</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="relative w-full max-w-screen-xl mx-auto py-32 p-4 md:px-28 flex flex-col items-center justify-center">
+      <h1 class="md:w-3/4 text-center mx-auto">Article and News</h1>
+      <h3 class="text-center mt-4">News, tips, tricks and more</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20 justify-between ">
+        <div class="flex border-2 p-2 rounded-lg border-black flex-col items-center hover:shadow-blog">
+          <img src="icon&vector/blog/img.png" alt="" class="w-full">
+          <div class="flex-1 mt-8 ">
+          <p class="caption font-bold">PODCAST</p>
+            <h3 class="font-bold text-vermillion mt-2">Setup your own podcast</h3>
+            <p class="caption mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris...</p>
+          </div>  
+          <hr class="border-davys-grey my-2 w-full">
+          <div class="flex justify-between mt-4 items-center w-full">
+            <div class="flex justify-center gap-2 items-center">
+              <div class="border border-davys-grey p-1 small rounded-md">business</div>
+              <div class="border border-davys-grey p-1 small rounded-md">startup</div>
+            </div>
+            <p class="small font-bold">Sep 14, 2021</p>
+          </div>
+        </div>
+        <div class="flex border-2 p-2 rounded-lg border-black flex-col items-center hover:shadow-blog">
+          <img src="icon&vector/blog/img (1).png" alt="" class="w-full">
+          <div class="flex-1 mt-8 ">
+          <p class="caption font-bold">TIPS & TRICK</p>
+            <h3 class="font-bold mt-2">Doodle artwork 101</h3>
+            <p class="caption mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel iam, quis nostrud exercitation ullamco laboris...</p>
+          </div>  
+          <hr class="border-davys-grey my-2 w-full">
+          <div class="flex justify-between mt-4 items-center w-full">
+            <div class="flex justify-center gap-2 items-center">
+              <div class="border border-davys-grey p-1 small rounded-md">art</div>
+              <div class="border border-davys-grey p-1 small rounded-md">creative</div>
+              <div class="border border-davys-grey p-1 small rounded-md">tips and trick</div>
+            </div>
+            <p class="small font-bold">Sep 12, 2021</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 mt-16">BROWSE ALL</button>
+    </section>
+    <section class="relative bg-alice-blue w-full py-32 p-4 md:px-28 flex flex-col items-center justify-center">
+      <div class="max-w-screen-xl mx-auto flex flex-col items-center justify-center w-full md:w-1/2">
+        <p class="caption font-bold text-vermillion border border-vermillion rounded-[4px] p-1 mb-4">BETA</p>
+        <h1 class="md:w-3/4 text-center mx-auto">Available now Pod of Cast App</h1>
+        <h3 class="text-center mt-4">We just launched our podcast app!</h3>
+        <button type="button" class="text-white bg-black hover:bg-gray-900 rounded-md text-sm font-bold px-8 py-4 box-shadow-btn-1 mt-24">DOWNLOAD NOW</button>
+        <p class="caption mb-2 mt-6">Content also available on:</p>
+        <div class="flex justify-center items-center gap-2 invert">
+          <img src="icon&vector/header/google podcast.png" class="h-6 w-auto" width="24" height="24" alt="">
+          <img src="icon&vector/header/spotify.png" class="h-6 w-auto" width="24" height="24" alt="">
+          <img src="icon&vector/header/youtube.png" class="h-6 w-auto" width="24" height="24" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 
